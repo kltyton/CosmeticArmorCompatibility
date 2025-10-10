@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "cosmeticarmorcompatibility",
+  "version": "${version}",
+  "name": "CosmeticArmorCompatibility",
+  "description": "A simple mod that adds Cosmetic Armor and compatibility with most other mods.",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/cosmeticarmorcompatibility/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.kltyton.cosmeticarmorcompatibility.client.CosmeticarmorcompatibilityClient"
+    ],
+    "main": [
+      "com.kltyton.cosmeticarmorcompatibility.Cosmeticarmorcompatibility"
+    ]
+  },
+  "mixins": [
+    "cosmeticarmorcompatibility.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
