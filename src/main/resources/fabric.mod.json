@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "CosmeticArmorCompatibility",
   "description": "A simple mod that adds Cosmetic Armor and compatibility with most other mods.",
-  "authors": [],
+  "authors": ["kltyton"],
   "contact": {},
   "license": "All-Rights-Reserved",
   "icon": "assets/cosmeticarmorcompatibility/icon.png",
@@ -18,7 +18,11 @@
     ]
   },
   "mixins": [
-    "cosmeticarmorcompatibility.mixins.json"
+    "cosmeticarmorcompatibility.mixins.json",
+    {
+      "config": "cosmeticarmorcompatibility.client.mixins.json",
+      "environment": "client"
+    }
   ],
   "depends": {
     "fabricloader": "*",
