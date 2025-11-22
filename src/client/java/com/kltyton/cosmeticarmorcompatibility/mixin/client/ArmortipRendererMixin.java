@@ -15,10 +15,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class ArmortipRendererMixin {
     @Redirect(method = "renderEntityWithArmor", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;getItemBySlot(Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;"))
     private static ItemStack getItemBySlot(Player instance, EquipmentSlot equipmentSlot) {
-        ItemStack cosmeticStack = CosmeticArmor.getCosmeticArmor(instance, equipmentSlot);
-        if (!cosmeticStack.isEmpty()) {
-            return instance.getInventory().getArmor(equipmentSlot.getIndex());
-        }
-        return instance.getItemBySlot(equipmentSlot);
+        return instance.getInventory().getArmor(equipmentSlot.getIndex());
     }
 }
