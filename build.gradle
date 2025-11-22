@@ -43,6 +43,7 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "curse.maven:cosmetic-armor-fabric-436659:4646421"
+    modImplementation "curse.maven:armortip-982964:5158247"
 }
 
 processResources {
